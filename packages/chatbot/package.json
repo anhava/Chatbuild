@@ -1,21 +1,37 @@
 {
-  "name": "@chatbuild/chatbot",
+  "name": "@ahiochat/chatbot",
   "version": "0.0.0",
   "private": true,
+  "main": "./src/chatWidget/index.tsx",
   "exports": {
-    ".": "./src/chatWidget/index.tsx"
+    ".": "./src/chatWidget/index.tsx",
+    "./styles.css": "./dist/output.css"
   },
   "type": "module",
   "scripts": {
+    "prebuild": "pnpm run tailwind",
+    "build": "tsc",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "tailwind": "tailwindcss -i ./global.css -o ./dist/output.css --watch",
-    "scss": "sass ./src/styles/index.scss ./dist/output.css --watch"
+    "tailwind": "tailwindcss -i ./global.css -o ./dist/output.css"
   },
-  "devDependencies": {
+  "dependencies": {
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
-    "@repo/eslint-config": "workspace:*",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.31",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.1.0",
+    "react-markdown": "^9.0.1",
+    "socket.io-client": "^4.7.5",
+    "tailwind-merge": "^2.3.0",
+    "use-sound": "^4.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "^1.12.4",
     "@types/eslint": "^8.56.5",
@@ -23,21 +39,15 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.19",
-    "class-variance-authority": "^0.7.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "postcss": "^8.4.38",
     "postcss-nested": "^6.0.1",
-    "react": "^18.2.0",
-    "react-icons": "^5.1.0",
-    "react-markdown": "^9.0.1",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.3.3"
   },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.3.31",
-    "socket.io-client": "^4.7.5",
-    "tailwind-merge": "^2.3.0",
-    "use-sound": "^4.0.3"
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

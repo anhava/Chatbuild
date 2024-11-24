@@ -1,81 +1,168 @@
-# Turborepo starter
+# Chatbotti
 
-This is an official starter Turborepo.
+A modern AI chatbot platform with real-time chat capabilities and custom training.
 
-## Using this example
+## Features
 
-Run the following command:
+### AI Chatbot
+- Train on your custom data
+- Upload files (PDF, DOCX, TXT, CSV)
+- Add website URLs and sitemaps
+- Real-time responses
 
-```sh
-npx create-turbo@latest
+### Live Chat
+- Real-time communication with customers
+- Agent dashboard
+- Chat assignment system
+- Typing indicators
+
+### Analytics & History
+- Chat history tracking
+- Usage analytics
+- Performance metrics
+- Export capabilities
+
+## Quick Start
+
+1. Install dependencies:
+```bash
+pnpm install
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+2. Set up environment:
+```bash
+cp .env.example .env
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
+3. Start development:
+```bash
 pnpm dev
 ```
 
-### Remote Caching
+## Integration
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
+Add to your website:
+```html
+<div id="chatbot"></div>
+<script src="https://unpkg.com/@aihiochat/cdn@latest/dist/index.js"></script>
+<script>
+   Chatbot.mount(document.getElementById('chatbot'), {
+       api_key: "your-api-key"
+    })
+</script>
 ```
 
-## Useful Links
+## Plans & Pricing
 
-Learn more about the power of Turborepo:
+### Pro (€39.99/mo)
+- 5k messages
+- Live chat
+- 100 web pages
+- 10 file uploads
+- Basic support
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+### Premium (€84.99/mo)
+- 20k messages
+- Live chat
+- 200 web pages
+- 10 file uploads
+- Priority support
+
+### Enterprise (€349.99/mo)
+- 100k messages
+- Live chat
+- 500 web pages
+- 20 file uploads
+- Priority phone support
+
+## Project Structure
+
+```
+apps/
+  web/           # Landing page
+  dashboard/     # Dashboard
+  socket/        # Socket.io server
+packages/
+  chatbot/       # Widget library
+  ui/           # Shared components
+  database/     # Database models
+  config/       # Shared configs
+```
+
+## Documentation
+
+- [Setup Guide](SETUP.md) - Development setup instructions
+- [Deployment Guide](DEPLOYMENT.md) - Production deployment guide
+- [Implementation Plan](TODO.md) - Feature implementation roadmap
+
+## Tech Stack
+
+### Frontend
+- Next.js 14 (App Router)
+- React Server Components
+- Tailwind CSS
+- shadcn/ui components
+
+### Backend
+- Socket.io with TypeScript
+- Prisma + PlanetScale/Neon
+- tRPC
+- Auth.js
+
+### Infrastructure
+- Vercel deployment
+- Redis Cloud
+- Uploadthing
+- Edge Functions
+
+## Development
+
+### Prerequisites
+- Node.js 18+
+- pnpm 8+
+- Git
+
+### Commands
+```bash
+# Install dependencies
+pnpm install
+
+# Development
+pnpm dev
+
+# Build
+pnpm build
+
+# Test
+pnpm test
+
+# Lint
+pnpm lint
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Create pull request
+
+See [SETUP.md](SETUP.md) for detailed development instructions.
+
+## Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for production deployment instructions.
+
+## Implementation Plan
+
+See [TODO.md](TODO.md) for the feature implementation roadmap.
+
+## License
+
+[MIT License](LICENSE)
+
+## Support
+
+- Email: support@chatbotti.com
+- Documentation: https://docs.chatbotti.com
+- Community Forum: https://community.chatbotti.com

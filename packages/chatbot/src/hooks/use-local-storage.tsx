@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 
 function getStorageValue<T>(key: string, defaultValue: T): T {
+  // Check if we're in the browser
+  if (typeof window === 'undefined') {
+    return defaultValue;
+  }
+  
   // getting stored value
   const saved = localStorage.getItem(key);
   const initial = saved ? JSON.parse(saved) : defaultValue;
@@ -16,8 +21,11 @@ export const useLocalStorage = <T,>(
   });
 
   useEffect(() => {
-    // storing input name
-    localStorage.setItem(key, JSON.stringify(value));
+    // Check if we're in the browser
+    if (typeof window !== 'undefined') {
+      // storing input name
+      localStorage.setItem(key, JSON.stringify(value));
+    }
   }, [key, value]);
 
   return [value, setValue];

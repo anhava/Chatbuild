@@ -1,0 +1,1 @@
+{"version":3,"file":"message-form.d.ts","sourceRoot":"","sources":["../../src/chatWidget/message-form.tsx"],"names":[],"mappings":"AAOA,KAAK,gBAAgB,GAAG;IACtB,MAAM,EAAE,MAAM,CAAC;IACf,cAAc,EAAE,MAAM,IAAI,CAAC;CAC5B,CAAC;AAEF,QAAA,MAAM,WAAW,+BAAgC,gBAAgB,4CAgGhE,CAAC;AAEF,eAAe,WAAW,CAAC"}

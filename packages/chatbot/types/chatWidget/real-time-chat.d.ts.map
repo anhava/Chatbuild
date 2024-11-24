@@ -1,0 +1,1 @@
+{"version":3,"file":"real-time-chat.d.ts","sourceRoot":"","sources":["../../src/chatWidget/real-time-chat.tsx"],"names":[],"mappings":"AAMA,OAAO,EAAE,eAAe,EAAE,MAAM,SAAS,CAAC;AAG1C,QAAA,MAAM,YAAY,wBAEf;IACD,cAAc,EAAE,eAAe,CAAC;CACjC,mDAsKA,CAAC;AAEF,eAAe,YAAY,CAAC"}

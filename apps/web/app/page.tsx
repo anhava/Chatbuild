@@ -1,19 +1,19 @@
 "use client";
 import React from "react";
-import Chatbot, { ChatbotNoWidget } from "@chatbuild/chatbot";
-const page = () => {
+
+const Page = () => {
   return (
-    <div style={{ width: "500px", height: "800px" }}>
-      <ChatbotNoWidget
-        rounded={false}
-        showWatermark
-        apiKey="3067535d-56be-4fc2-a868-3e6488bd250c"
-      />
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Test Page</h1>
+      <p>This is a test page to verify Next.js is working correctly.</p>
+      <button 
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        onClick={() => alert('Button clicked!')}
+      >
+        Test Button
+      </button>
     </div>
   );
 };
 
-export default page;
-
-// production chatbot API key is 3067535d-56be-4fc2-a868-3e6488bd250c
-// development chatbot API key is f9cc16b8-8021-4d10-a713-f7a45717cd89
+export default Page;
